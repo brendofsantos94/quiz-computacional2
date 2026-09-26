@@ -57,6 +57,17 @@ Depois, abra [http://127.0.0.1:8765](http://127.0.0.1:8765) no navegador.
 > Não abra somente o arquivo `index.html` pelo explorador de arquivos: alguns navegadores bloqueiam
 > o carregamento de JSON nesse modo.
 
+## Publicação no GitHub Pages
+
+O workflow [pages.yml](.github/workflows/pages.yml) prepara e publica apenas os arquivos estáticos
+necessários (`index.html`, `css/`, `data/` e `js/`) a cada envio para a branch `main`.
+
+Para ativar a primeira publicação, acesse **Settings → Pages** no repositório do GitHub e selecione
+**GitHub Actions** como fonte de publicação. Depois do próximo envio para `main`, o site ficará
+disponível em:
+
+`https://brendofsantos94.github.io/quiz-computacional2/`
+
 ## Testes
 
 Com o Node.js instalado, execute:
