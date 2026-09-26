@@ -1,0 +1,42 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172554;
+  background: #eef4ff;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; }
+
+button, input { font: inherit; }
+
+.pagina { width: min(100% - 2rem, 720px); margin: 0 auto; padding: 2.5rem 0; }
+.cabecalho { text-align: center; margin-bottom: 1.5rem; }
+.sobretitulo { margin: 0; color: #1d4ed8; font-weight: 700; }
+h1 { margin: .4rem 0; font-size: clamp(1.9rem, 5vw, 2.8rem); }
+.progresso { min-height: 1.2rem; margin: 0; color: #334155; }
+
+.cartao { background: #fff; border-radius: 1rem; box-shadow: 0 10px 30px #1e3a5f24; padding: clamp(1.25rem, 4vw, 2rem); }
+.questao-numero { color: #1d4ed8; font-weight: 700; margin: 0 0 .5rem; }
+h2 { font-size: clamp(1.3rem, 4vw, 1.75rem); line-height: 1.35; margin: 0 0 1.5rem; }
+.alternativas { display: grid; gap: .75rem; border: 0; padding: 0; margin: 0; }
+.alternativa { display: flex; align-items: flex-start; gap: .75rem; width: 100%; padding: 1rem; border: 2px solid #cbd5e1; border-radius: .75rem; cursor: pointer; color: #172554; background: #fff; }
+.alternativa:has(input:checked) { border-color: #2563eb; background: #eff6ff; }
+.alternativa input { margin-top: .2rem; accent-color: #1d4ed8; }
+.acoes { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+button { min-height: 44px; padding: .7rem 1rem; border: 0; border-radius: .6rem; background: #1d4ed8; color: #fff; cursor: pointer; font-weight: 700; }
+button:hover { background: #1e40af; }
+button.secundario { background: #e2e8f0; color: #172554; }
+button:focus-visible, .alternativa:has(input:focus-visible) { outline: 3px solid #f59e0b; outline-offset: 3px; }
+.mensagem { margin: 1.25rem 0 0; padding: 1rem; border-radius: .6rem; font-weight: 700; }
+.mensagem.correta { color: #14532d; background: #dcfce7; }
+.mensagem.incorreta, .mensagem.erro { color: #7f1d1d; background: #fee2e2; }
+.resultado-lista { list-style: none; padding: 0; display: grid; gap: .7rem; }
+.resultado-lista li { padding: .9rem; background: #eff6ff; border-radius: .6rem; font-weight: 700; }
+
+@media (max-width: 480px) {
+  .pagina { width: min(100% - 1rem, 720px); padding: 1rem 0; }
+  .cartao { border-radius: .75rem; }
+  .acoes button { width: 100%; }
+}
